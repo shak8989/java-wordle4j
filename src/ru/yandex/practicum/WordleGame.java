@@ -1,4 +1,5 @@
 package ru.yandex.practicum;
+
 import java.io.PrintWriter;
 import java.util.*;
 
@@ -33,7 +34,6 @@ public class WordleGame {
     }
 
 
-
     //  Сделать ход
     public String makeGuess(String input) throws WordleException {
 
@@ -52,7 +52,6 @@ public class WordleGame {
 
         log.println("Guess: " + guess + " -> " + result);
         log.flush();
-
 
 
         return result;
@@ -113,7 +112,7 @@ public class WordleGame {
     }
 
     public boolean isWin() {
-        return !guesses.isEmpty() &&guesses.get(guesses.size() - 1).equals(answer);
+        return !guesses.isEmpty() && guesses.get(guesses.size() - 1).equals(answer);
     }
 
     public String getAnswer() {

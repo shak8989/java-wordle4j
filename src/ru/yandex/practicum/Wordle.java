@@ -1,4 +1,5 @@
 package ru.yandex.practicum;
+
 import java.io.PrintWriter;
 import java.util.Scanner;
 
@@ -59,9 +60,9 @@ public class Wordle {
 
             System.out.println("Загаданное слово: " + game.getAnswer());
 
-        }  catch (Exception e) {
-        System.out.println("Критическая ошибка: " + e.getMessage());
-        e.printStackTrace();
+        } catch (Exception e) {
+            System.out.println("Критическая ошибка: " + e.getMessage());
+            e.printStackTrace();
 
         } // в лог можно тоже писать
 
