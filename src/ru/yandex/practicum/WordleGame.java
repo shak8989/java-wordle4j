@@ -1,6 +1,7 @@
 package ru.yandex.practicum;
 import java.io.PrintWriter;
 import java.util.*;
+
 /*
 в этом классе хранится словарь и состояние игры
     текущий шаг
@@ -13,6 +14,7 @@ import java.util.*;
 
 не забудьте про специальные типы исключений для игровых и неигровых ошибок
  */
+
 public class WordleGame {
     private final Random random = new Random();
     private final WordleDictionary dictionary;
