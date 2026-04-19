@@ -1,7 +1,6 @@
 package ru.yandex.practicum;
 
 import java.util.*;
-import java.util.List;
 
 /*
 этот класс содержит в себе список слов List<String>
@@ -13,6 +12,9 @@ public class WordleDictionary {
     private final Random random = new Random();
     private final List<String> words;
     private final Set<String> wordSet; // для быстрого поиска
+    private static final int WORD_LENGTH = 5;
+    private static final String RUSSIAN_WORD_REGEX = "[а-я]+";
+
 
     public WordleDictionary(List<String> words) {
         this.words = new ArrayList<>();
@@ -47,7 +49,9 @@ public class WordleDictionary {
 
     //  Проверка валидности
     public static boolean isValidWord(String word) {
-        return word != null && word.length() == 5 && word.matches("[а-я]+");
+        return word != null
+                && word.length() == WORD_LENGTH
+                && word.matches(RUSSIAN_WORD_REGEX);
     }
 
     public List<String> getWords() {
